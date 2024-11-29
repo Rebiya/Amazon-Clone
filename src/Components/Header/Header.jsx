@@ -1,6 +1,5 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
-import { MdOutlineMenu } from "react-icons/md";
 import { BsCart } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import styles from "./Header.module.css";
@@ -33,9 +32,6 @@ const Header = () => {
         </div>
 
         {/* Search and Menu Section */}
-
-        {/* <MdOutlineMenu className={styles.icon} /> */}
-
         <div className={styles.middleWrapper}>
           <select name="item" id="" className={styles.AllItem}>
             <option value="">All</option>
@@ -69,9 +65,11 @@ const Header = () => {
             <span>&Orders</span>
           </a>
           <a href="#">
-            <div>
+            <div clas
+            >
               <p className={styles.count}>0</p>
               <BsCart className={styles.cart} />
+              <span>Cart</span>
             </div>
           </a>
         </div>
