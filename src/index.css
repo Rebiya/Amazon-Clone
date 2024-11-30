@@ -1,9 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  /* max-width: 100%; */
+  box-sizing: border-box;
 }
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
+}
+:root {
+  --primary-color: #febd69;
+  --primary-shade: #d49644;
 }

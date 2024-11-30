@@ -6,6 +6,7 @@
   background-color: #036444;
   position: fixed;
   padding-left: 2%;
+  z-index: 4;
 }
 .right_wrapper {
   display: flex;
