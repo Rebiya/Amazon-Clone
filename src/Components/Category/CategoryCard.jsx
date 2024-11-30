@@ -1,0 +1,59 @@
+import React from "react";
+import styles from "./Category.module.css";
+import Card from "react-bootstrap/Card";
+
+// const CategoryCard = ({ Data }) => {
+//   return (
+//     <div className={styles.CategoryCard}>
+//       <Card className="shadow" style={{ width: "18rem" }}>
+//         <Card.Body>
+//           <a href="">
+//             <Card.Title>
+//               <p>{Data.title}</p>
+//             </Card.Title>
+//           </a>
+//           <a href="#">
+//             <Card.Img
+//               variant="top"
+//               src={Data.imageLink}
+//               alt={Data.title}
+//               style={{
+//                 height: Data.isThird ? "300px" : "200px", // Conditional height
+//                 objectFit: "cover",
+//                 width: "100%"
+//               }}
+//             />
+//           </a>
+//           <Card.Text>
+//             <a href="#">See more</a>
+//           </Card.Text>
+//         </Card.Body>
+//       </Card>
+//     </div>
+//   );
+// };
+
+// export default CategoryCard;
+
+const CategoryCard = ({ Data }) => {
+  return (
+    <div className={styles.CategoryCard}>
+      <a href="#">
+        <span>
+          <h2>{Data.title}</h2>
+        </span>
+        <img
+          src={Data.imageLink}
+          alt=""
+          style={{
+            height: Data.isThird ? "300px" : "200px", // Conditional height
+            objectFit: "cover",
+            width: "100%"
+          }}
+        />
+        <p>shop now</p>
+      </a>
+    </div>
+  );
+};
+export default CategoryCard;

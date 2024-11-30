@@ -1,18 +1,17 @@
 .Header_Wrapper {
   padding: 10px 0;
-  height: 40px;
+  height: 64px;
   width: 100%;
   display: flex;
-  gap: 5px;
-  background-color: #026343;
-  align-items: center;
+  background-color: #036444;
   position: fixed;
+  padding-left: 2%;
 }
 .right_wrapper {
   display: flex;
   justify-content: space-between;
   color: #fffffff9;
-  width: 20%;
+  width: 18%;
 }
 .logo img {
   height: 40px;
@@ -20,25 +19,25 @@
 .location {
   display: flex;
   align-items: center;
-  padding-top: 4px;
 }
 .deliveredTo {
   font-size: 0.8rem;
 }
 .country {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .AllItem {
-  height: 42px;
+  height: 40px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 10px 0;
   font-weight: bold;
+  background-color: #e6e6e6;
 }
 .searchInput {
   width: 40vw;
@@ -47,27 +46,26 @@
 }
 .middleWrapper {
   display: flex;
-  /* width: 65%; */
-  margin-left: 1%;
+  width: 55%;
+  margin-left: 3%;
 }
 .IoSearch {
   color: white;
-  height: 25px;
+  height: 40px;
 }
 .leftWrapper {
-  width: 26%;
-  align-items: center;
+  width: 30%;
   display: flex;
   justify-content: space-between;
-  margin-left:30px;
+  margin-right: 2%;
 }
 .leftWrapper a,
 .right_wrapper a {
   text-decoration: none;
   color: white;
-  padding-top: 5px;
 }
-.leftWrapper span ,.right_wrapper span{
+.leftWrapper span,
+.right_wrapper span {
   font-size: 2 rem;
   font-weight: bold;
 }
@@ -76,18 +74,17 @@
 }
 .language {
   display: flex;
-  height: 30px;
+  height: 40px;
 }
 .flag {
   width: 25px;
-  height: 15px;
+  height: 35px;
   padding: 7px 0;
 }
 .icon {
   color: white;
-  margin-left: 0;
   background-color: #7f1153;
-  height: 25px;
+  height: 40px;
   padding: 9px 0;
   width: 40px;
   border-top-right-radius: 5px;
@@ -108,8 +105,8 @@
   color: white;
   position: fixed;
   top: 5px;
-  background-color: #026343;
-  margin: 7px 0 0 5px;
+  background-color: #036444;
+  margin: 1px 0 0 8px;
 }
 .leftWrapper a:hover,
 .right_wrapper a:hover {
@@ -118,7 +115,8 @@
 }
 .LowerHeaderWrapper {
   padding: 10px 0;
-  height: 25px;
+  height: 50px;
+  width: 100%;
   background-color: #085749;
 }
 .LowerHeaderWrapper .links {
@@ -126,11 +124,14 @@
   justify-content: space-between;
   color: white;
   list-style: none;
-  width: 460px;
+  width: 560px;
+  padding-top: 8px;
+  padding-left: 2%;
 }
 
 .links a {
-  color: rgba(255, 255, 255, 0.871);
+  color: rgba(255, 255, 255);
+  font-weight: bold;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;

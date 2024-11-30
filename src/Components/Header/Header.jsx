@@ -7,7 +7,6 @@ import { Form, Row, Col, Container } from "react-bootstrap";
 import img from "../../assets/images/10001.jpg";
 const Header = () => {
   return (
-    <Container fluid>
       <div className={styles.Header_Wrapper}>
         {/* Logo Section */}
         <div className={styles.right_wrapper}>
@@ -74,7 +73,6 @@ const Header = () => {
           </a>
         </div>
       </div>
-    </Container>
   );
 };
 

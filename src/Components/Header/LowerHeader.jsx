@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Header.module.css";
-import { MdOutlineMenu } from "react-icons/md";
+import { TfiMenu } from "react-icons/tfi";
 const LowerHeader = () => {
   return (
     <div className={styles.LowerHeaderWrapper}>
       <ul className={styles.links}>
         <li>
           <a href="#">
-            <MdOutlineMenu className={styles.menu} />
+            <TfiMenu />
             All
           </a>
         </li>

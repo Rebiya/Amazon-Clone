@@ -1,0 +1,56 @@
+/* .Category {
+  display: flex;
+}
+.CategoryCard {
+  width: 250px;
+  height: 300px;
+  margin: 35px;
+}
+.CategoryCard img {
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+.CategoryCard a {
+  text-decoration: none;
+  color: rgb(9, 132, 209);
+  font-size: 12px;
+  font-weight: bold;
+}
+.CategoryCard a p{
+  color: black;
+  font-size: 26px;
+} */
+.CategoryCard {
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.CategoryCard a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+.CategoryCard p {
+  padding: 10px;
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
+}
+.CategoryCard img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 250px;
+  padding: 0px 10px;
+}
+.Category {
+  padding: 0 3%;
+  position: relative;
+  margin-top: -20%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  place-items: center;
+  z-index: 2;
+}
