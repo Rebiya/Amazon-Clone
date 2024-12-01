@@ -55,7 +55,6 @@
 
 .card_container .button:hover {
   background-color: var(--primary-shade);
-  transform: scale(1.05);
 }
 
 .card_container:hover .button {

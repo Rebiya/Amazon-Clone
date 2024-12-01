@@ -5,6 +5,8 @@ import SignUpPage from "./Pages/Auth/SignUp";
 import OrdersPage from "./Pages/Orders/Orders";
 import PaymentPage from "./Pages/Payment/Payment";
 import CartPage from "./Pages/Cart/Cart";
+import Results from "./Pages/Results/Results"
+import Category from "./Components/Category/Category";
 const Routers = () => {
   return (
     <Router>
@@ -14,6 +16,7 @@ const Routers = () => {
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/Category/:category" element={<Results />} />
       </Routes>
     </Router>
   );

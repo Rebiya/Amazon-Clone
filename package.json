@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.13.5",
     "@mui/icons-material": "^6.1.9",
     "@mui/material": "^6.1.9",
+    "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
     "layout": "^2.2.0",
     "numeral": "^2.0.6",

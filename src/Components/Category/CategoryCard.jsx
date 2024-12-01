@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Category.module.css";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 // const CategoryCard = ({ Data }) => {
 //   return (
@@ -38,21 +39,19 @@ import Card from "react-bootstrap/Card";
 const CategoryCard = ({ Data }) => {
   return (
     <div className={styles.CategoryCard}>
-      <a href="#">
+      <Link to={`/Category/${Data.category}`}>
         <span>
           <h2>{Data.title}</h2>
         </span>
-        <img
-          src={Data.imageLink}
-          alt=""
+        <img src={Data.image} alt="" />
+        <p
           style={{
-            height: Data.isThird ? "300px" : "200px", // Conditional height
-            objectFit: "cover",
-            width: "100%"
+            margin: Data.isThird ? "0px 0px 0px" : "34px 0 0"
           }}
-        />
-        <p>shop now</p>
-      </a>
+        >
+          shop now
+        </p>
+      </Link>
     </div>
   );
 };

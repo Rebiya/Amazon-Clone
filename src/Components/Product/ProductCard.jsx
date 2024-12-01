@@ -3,11 +3,13 @@ import styles from "./Product.module.css";
 import Rating from "@mui/material/Rating";
 import Currency from "./Currency";
 const ProductCard = ({ product }) => {
-  const { title, image, rating, price } = product;
+  const { title, image, rating, price, category } = product;
+  console.log(product);
+
   return (
     <div className={`${styles.card_container}`}>
       <a href="#">
-        <img src={image} alt={title} />
+        <img src={image} alt={category} />
       </a>
       <div className={styles.desc}>
         <h3>{title}</h3>
