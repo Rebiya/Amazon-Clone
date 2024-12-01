@@ -13,7 +13,7 @@ const Results = () => {
 
   useEffect(() => {
     axios
-      .get(`${basePath}/${category}`)
+      .get(`${basePath}/products/category/${category}`)
       .then((response) => {
         setProducts(Array.isArray(response.data) ? response.data : []);
       })
