@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoSearch } from "react-icons/io5";
 import { BsCart } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { Form, Row, Col, Container } from "react-bootstrap";
 import img from "../../assets/images/10001.jpg";
+import { DataContext } from "../DataProvider/DataProvider";
 const Header = () => {
+  const [{ basket }, dispatch] = useContext(DataContext);
+  //  console.log(basket.length);
   return (
     <div className={styles.Header_Wrapper}>
       {/* Logo Section */}
@@ -66,9 +69,9 @@ const Header = () => {
         </Link>
         <Link to="/cart">
           <div clas>
-            <p className={styles.count}>0</p>
+            <p className={styles.count}>{basket.length}</p>
             <BsCart className={styles.cart} />
-            <span>Cart</span>
+            <span>cart</span>
           </div>
         </Link>
       </div>
