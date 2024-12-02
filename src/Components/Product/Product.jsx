@@ -19,8 +19,11 @@ const Product = () => {
   return (
     <div className={styles.Product_container}>
       {products.map((singleProduct) => (
-        <ProductCard key={singleProduct.id} 
-        product={singleProduct} />
+        <ProductCard
+          key={singleProduct.id}
+          product={singleProduct}
+          renderAdd={true}
+        />
       ))}
     </div>
   );
