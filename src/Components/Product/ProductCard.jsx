@@ -3,16 +3,23 @@ import styles from "./Product.module.css";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import Currency from "./Currency";
-const ProductCard = ({ product }) => {
-  const { title, image, rating, price, category ,id} = product;
+const ProductCard = ({ product, flex, renderDesc }) => {
+  const { title, image, rating, price, category, id, description } = product;
   console.log(product);
 
   return (
-    <div className={`${styles.card_container}`}>
-      <Link to={`/products/${id}`}>
-        <img src={image} alt={category} />
-      </Link>
-      <div className={styles.desc}>
+    <div
+      className={`${styles.card_container} ${
+        flex ? styles.product_flexed : ""
+      }`}
+    >
+      <div>
+        <Link to={`/products/${id}`}>
+          <img src={image} alt={category} />
+        </Link>
+      </div>
+      <div>
+        {renderDesc && <div style={{ maxWidth: "500px" }}>{description}</div>}
         <h3>{title}</h3>
         <div className={styles.rating}>
           <Rating value={rating?.rate || 0} precision={0.1} />
