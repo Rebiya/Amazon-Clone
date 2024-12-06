@@ -36,7 +36,7 @@ const ProductCard = ({ product, flex, renderDesc, renderAdd }) => {
         </Link>
       </div>
       <div>
-        {renderDesc && <div style={{ maxWidth: "500px" }}>{description}</div>}
+        {renderDesc && <div style={{ maxWidth: "750px" }}>{description}</div>}
         <h3>{title}</h3>
         <div className={styles.rating}>
           <Rating value={rating?.rate || 0} precision={0.1} />
