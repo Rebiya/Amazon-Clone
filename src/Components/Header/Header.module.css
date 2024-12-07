@@ -44,6 +44,11 @@
   width: 40vw;
   height: 40px;
   overflow: hidden;
+  outline: 0;
+}
+.searchInput:hover {
+  background-color: white;
+  outline: #026343 solid 4px;
 }
 .middleWrapper {
   display: flex;

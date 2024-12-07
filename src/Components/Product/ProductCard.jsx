@@ -7,9 +7,9 @@ import { DataContext } from "../DataProvider/DataProvider";
 import { type } from "../../Utility/action.type";
 const ProductCard = ({ product, flex, renderDesc, renderAdd }) => {
   const { title, image, rating, price, category, id, description } = product;
-  console.log(product);
+  // console.log(product);
   const [state, dispatch] = useContext(DataContext);
-  console.log(state);
+  // console.log(state);
   const addToCart = () => {
     dispatch({
       type: type.ADD_TO_BASKET,

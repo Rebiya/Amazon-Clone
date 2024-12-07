@@ -7,8 +7,9 @@ import styles from "./Header.module.css";
 import { Form, Row, Col, Container } from "react-bootstrap";
 import img from "../../assets/images/10001.jpg";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 const Header = () => {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
   //  console.log(basket.length);
   return (
     <div className={styles.Header_Wrapper}>
@@ -59,9 +60,22 @@ const Header = () => {
             <option value="EN">EN</option>
           </select>
         </Link>
-        <Link to="/auth" className="signin">
-          <p>sign in</p>
-          <span>Account & Links</span>
+        <Link to={!user ? "/auth": ""} className="signin">
+          <p>
+            {user ? (
+              <>
+                <p style={{ fontSize: "0.75rem" }}>
+                  {"Hello " + user?.email?.split("@")[0]}
+                </p>
+                <span onClick={()=>auth.signOut()}>sign out</span>
+              </>
+            ) : (
+              <>
+                <p>signin</p>
+                <span>Account & Links</span>
+              </>
+            )}
+          </p>
         </Link>
         <Link to="/orders">
           <p>sales</p>
