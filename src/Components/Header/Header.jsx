@@ -60,22 +60,20 @@ const Header = () => {
             <option value="EN">EN</option>
           </select>
         </Link>
-        <Link to={!user ? "/auth": ""} className="signin">
-          <p>
-            {user ? (
-              <>
-                <p style={{ fontSize: "0.75rem" }}>
-                  {"Hello " + user?.email?.split("@")[0]}
-                </p>
-                <span onClick={()=>auth.signOut()}>sign out</span>
-              </>
-            ) : (
-              <>
-                <p>signin</p>
-                <span>Account & Links</span>
-              </>
-            )}
-          </p>
+        <Link to={!user ? "/auth" : ""} className="signin">
+          {user ? (
+            <>
+              <p style={{ fontSize: "0.75rem" }}>
+                {"Hello " + user?.email?.split("@")[0]}
+              </p>
+              <span onClick={() => auth.signOut()}>sign out</span>
+            </>
+          ) : (
+            <>
+              <p>signin</p>
+              <span>Account & Links</span>
+            </>
+          )}
         </Link>
         <Link to="/orders">
           <p>sales</p>
