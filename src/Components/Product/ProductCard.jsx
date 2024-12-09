@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import Currency from "./Currency";
 import { DataContext } from "../DataProvider/DataProvider";
 import { type } from "../../Utility/action.type";
+
 const ProductCard = ({ product, flex, renderDesc, renderAdd }) => {
   const { title, image, rating, price, category, id, description } = product;
-  // console.log(product);
   const [state, dispatch] = useContext(DataContext);
-  // console.log(state);
+
   const addToCart = () => {
     dispatch({
       type: type.ADD_TO_BASKET,
@@ -42,11 +42,9 @@ const ProductCard = ({ product, flex, renderDesc, renderAdd }) => {
           <Rating value={rating?.rate || 0} precision={0.1} />
           <small>{rating?.count || 0} </small>
         </div>
-
         <div>
           <Currency amount={price} />
         </div>
-
         {renderAdd && (
           <button className={styles.button} onClick={addToCart}>
             Add To Cart
