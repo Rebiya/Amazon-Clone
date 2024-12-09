@@ -1,7 +1,0 @@
-.Product_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  margin: 8%;
-  gap: 20px;
-  justify-items: center;
-}
