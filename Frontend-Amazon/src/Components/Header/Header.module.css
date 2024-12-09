@@ -1,0 +1,151 @@
+.Header_Wrapper {
+  padding: 10px 0;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  background-color: #036444;
+  position: fixed;
+  padding-left: 2%;
+  z-index: 4;
+}
+.right_wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: #fffffff9;
+  width: 18%;
+}
+.logo img {
+  height: 40px;
+}
+.location {
+  display: flex;
+  align-items: center;
+}
+.deliveredTo {
+  font-size: 0.8rem;
+}
+.country {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.AllItem {
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #e6e6e6;
+}
+.searchInput {
+  width: 40vw;
+  height: 40px;
+  overflow: hidden;
+  outline: 0;
+}
+.searchInput:hover {
+  background-color: white;
+  outline: #026343 solid 4px;
+}
+.middleWrapper {
+  display: flex;
+  width: 55%;
+  margin-left: 3%;
+}
+.IoSearch {
+  color: white;
+  height: 40px;
+}
+.leftWrapper {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+}
+.leftWrapper a,
+.right_wrapper a {
+  text-decoration: none;
+  color: white;
+}
+.leftWrapper span,
+.right_wrapper span {
+  font-size: 2 rem;
+  font-weight: bold;
+}
+.leftWrapper p {
+  font-size: 0.5;
+}
+.language {
+  display: flex;
+  height: 40px;
+}
+.flag {
+  width: 25px;
+  height: 35px;
+  padding: 7px 0;
+}
+.icon {
+  color: white;
+  background-color: #7f1153;
+  height: 40px;
+  padding: 9px 0;
+  width: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.EN {
+  background-color: #026343;
+  color: white;
+  height: 30px;
+  border: none !important;
+}
+.cart {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+.count {
+  color: white;
+  position: fixed;
+  top: 5px;
+  background-color: #036444;
+  margin: 1px 0 0 8px;
+}
+.leftWrapper a:hover,
+.right_wrapper a:hover {
+  border: white 1px solid;
+  border-radius: 2px;
+}
+.LowerHeaderWrapper {
+  padding: 10px 0;
+  height: 50px;
+  width: 100%;
+  background-color: #085749;
+}
+.LowerHeaderWrapper .links {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  list-style: none;
+  width: 560px;
+  padding-top: 8px;
+  padding-left: 2%;
+}
+
+.links a {
+  color: rgba(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.links a:hover {
+  color: white;
+}
+.icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}

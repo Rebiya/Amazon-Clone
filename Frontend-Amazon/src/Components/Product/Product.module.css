@@ -1,0 +1,124 @@
+.Product_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 8%;
+  gap: 20px;
+  justify-items: center;
+}
+
+.card_container {
+  width: 100%;
+  font-size: 14px;
+  max-width: 250px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 15px 25px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+}
+.card_container img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.card_container .button {
+  display: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 30px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.card_container .button:hover {
+  background-color: var(--primary-shade);
+}
+
+.card_container:hover .button {
+  display: block;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 900px) {
+  .Product_container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    gap: 15px;
+    margin: 8px auto;
+  }
+
+  .card_container {
+    height: 320px;
+  }
+
+  .card_container img {
+    height: 180px;
+  }
+
+  .card_container .button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .product_flexed {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .Product_container {
+    grid-template-columns: 4fr;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  .card_container {
+    width: 90%;
+    height: auto;
+  }
+  .card_container img {
+    height: 150px;
+  }
+  .card_container .button {
+    font-size: 10px;
+  }
+}
+
+.product_flexed {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 15px 0;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  gap: 5%;
+  box-shadow: none;
+}
+.product_flexed img {
+  width: 400px !important;
+  height: 450px;
+  border-radius: 8px;
+}
+.product_flexed h3 {
+  padding: 0 8px;
+}
+.product_flexed .button {
+  display: block;
+  position: static;
+  width: auto;
+  margin: 0;
+}
