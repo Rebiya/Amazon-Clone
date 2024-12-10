@@ -31,3 +31,8 @@
 .orders_container div {
     height: auto !important;
 }
+@media screen and (max-width: 576px){
+    .container{
+        /* font-size: 0.6rem; */
+    }
+}
