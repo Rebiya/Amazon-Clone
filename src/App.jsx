@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        console.log(authUser);
+        // console.log(authUser);
         Dispatch({
           type: type.SET_USER,
           user: authUser

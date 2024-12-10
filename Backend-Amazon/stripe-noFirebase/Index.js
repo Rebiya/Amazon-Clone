@@ -11,7 +11,8 @@ const stripe = require("stripe")(process.env.STRIPE_KEY);
 const app = express();
 
 // Use CORS middleware to allow requests from any origin
-app.use(cors({ origin: true }));
+app.use(cors({ origin: "http://localhost:5173" }));
+
 
 // Parse incoming JSON requests
 app.use(express.json());
@@ -31,9 +32,10 @@ app.post("/payment/create", async (req, res) => {
       currency: "usd"
     });
     // Respond with the payment intent
-    res.status(201).json({
-      clientSecrete: paymentIntent.client_secret
-    });
+   res.status(201).json({
+     clientSecret: paymentIntent.client_secret 
+   });
+
     console.log(paymentIntent);
   } else {
     // Respond with an error if the total is not greater than 0
@@ -42,6 +44,7 @@ app.post("/payment/create", async (req, res) => {
 });
 
 // Export the Express app as a Firebase Cloud Function
-app.listen(5000, (res, req) => {
- console.log(`successfully listened on port &{PORT}:http://localhost:&{PORT}`);
+app.listen(4000, (err) => {
+  if (err) console.log(err);
+  console.log(`successfully listened on port &{PORT}:http://localhost:&{PORT}`);
 });

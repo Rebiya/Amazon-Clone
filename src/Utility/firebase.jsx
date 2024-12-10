@@ -14,7 +14,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = app.firestore;
+export const db = app.firestore();
 // https://firebase.google.com/docs/web/setup#available-libraries
 //some commands needed
 // firebase login
