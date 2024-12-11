@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/images/download.png";
 import styles from "./Auth.module.css";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
@@ -19,6 +19,8 @@ const Auth = () => {
 
   const [{ user }, dispatch] = useContext(DataContext);
   const navigate = useNavigate();
+  const navStateData = useLocation();
+
   //function to be called onSubmit of sign in and sign up button
   const authHandler = async (e) => {
     e.preventDefault();
@@ -37,7 +39,8 @@ const Auth = () => {
           type: type.SET_USER,
           user: userCredential.user
         });
-        navigate("/");
+        setLoading({ ...loading, signIn: false });
+        navigate(navStateData?.state?.redirect || "/");
       } catch (err) {
         console.error("Error signing in:", err.message);
         setError(err.message);
@@ -58,7 +61,8 @@ const Auth = () => {
           type: type.SET_USER,
           user: userCredential.user
         });
-        navigate("/");
+        setLoading({ ...loading, signUp: false });
+        navigate(navStateData?.state?.redirect || "/");
       } catch (err) {
         console.error("Error signing up:", err.message);
         setError(err.message);
@@ -80,6 +84,18 @@ const Auth = () => {
         {/* Sign In Form */}
         <div>
           <h1>Sign In</h1>
+          {navStateData?.state?.msg && (
+            <small
+              style={{
+                padding: "5px",
+                textAlign: "center",
+                color: "red",
+                fontWeight: "bold"
+              }}
+            >
+              {navStateData?.state?.msg}
+            </small>
+          )}
           <form>
             <div>
               <label htmlFor="email">Email</label>

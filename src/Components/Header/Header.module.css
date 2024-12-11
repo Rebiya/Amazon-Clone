@@ -127,7 +127,7 @@
 }
 .LowerHeaderWrapper .links {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   color: white;
   list-style: none;
   width: 560px;
@@ -139,7 +139,7 @@
   color: rgba(255, 255, 255);
   font-weight: bold;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.8rem;
   transition: color 0.3s ease;
 }
 .links a:hover {
@@ -148,4 +148,55 @@
 .icon {
   margin-right: 5px;
   vertical-align: middle;
+}
+@media screen and (max-width: 576px) {
+  .logo img {
+    height: 40px;
+    width: 35vw;
+    margin-right: 60px;
+  }
+  .location {
+    display: flex;
+    align-items: center;
+  }
+  .deliveredTo {
+    font-size: 0.5rem;
+  }
+  .right_wrapper{
+    width: 30%;
+  }
+  .country {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  .searchInput {
+    width:20vw;
+  }
+  .middleWrapper {
+    display: flex;
+    width: 40%;
+    margin-left: 5%;
+  }
+  .leftWrapper p {
+    font-size: 0.5;
+  }
+   .leftWrapper{
+    display: flex;
+    gap:7px;
+   }
+  .language {
+    display: none;
+  }
+  .icon {
+    padding: 9px 0;
+    width: 20px;
+  }
+  .leftWrapper a,
+  .right_wrapper a {
+    font-size: small;
+  }
+
+  .LowerHeaderWrapper {
+    display: none;
+  }
 }

@@ -11,6 +11,9 @@ import { auth } from "../../Utility/firebase";
 const Header = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
   //  console.log(basket.length);
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <div className={styles.Header_Wrapper}>
       {/* Logo Section */}

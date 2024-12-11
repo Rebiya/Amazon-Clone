@@ -1,0 +1,38 @@
+.container {
+    background-color: #efeeee;
+    padding: 30px;
+    color: black;
+    margin: 0;
+    width: 100%;
+}
+
+.orders_container {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.orders_container h1 {
+    border-bottom: 2px solid var(--primary-shade);
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.orders_container p {
+    padding: 30px;
+}
+
+.orders_container img {
+    width: 100px !important;
+    background-color: white;
+    height: auto;
+}
+
+.orders_container div {
+    height: auto !important;
+}
+@media screen and (max-width: 576px){
+    .container{
+        /* font-size: 0.6rem; */
+    }
+}

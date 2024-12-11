@@ -6,6 +6,7 @@ import ProductCard from "../../Components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "../../Components/Product/Currency";
 // import { axiosInstance } from "../../../Api/axios";
+import { axiosInstance } from "../../Api/axios";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { type } from "../../Utility/action.type";
@@ -28,56 +29,55 @@ function Payment() {
   }, 0);
 
   const handleChange = (e) => {
-    // e.preventDefault();
     e?.error?.message ? setCardError(e?.error?.message) : setCardError("");
   };
 
   const handlePayment = async (e) => {
     e.preventDefault();
 
-    // try {
-    //   setProcessing(true);
+    try {
+      setProcessing(true);
 
-    //   //1.  backend || function ---> contact to the client secret
-    //   const response = await axiosInstance({
-    //     method: "POST",
-    //     url: `/payment/create?total=${total * 100}`
-    //   });
-    //   // console.log(response.data)
-    //   const clientSecret = response.data?.clientSecret;
-    //   // console.log(clientSecret)
+      //1.  backend || function ---> contact to the client secret
+      const response = await axiosInstance({
+        method: "POST",
+        url: `/payment/create?total=${total * 100}`
+      });
+      // console.log("response from axios URL " + response); //this will return client secrete
+      const clientSecret = response.data?.clientSecret;
+      // console.log("Client secrete number coming from backend" + clientSecret);
 
-    //   //2 client side confirmation
-    //   const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
-    //     payment_method: {
-    //       card: elements.getElement(CardElement)
-    //     }
-    //   });
-    //   // console.log("payment intent",paymentIntent)
+      // 2 client side confirmation
+      const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement)
+        }
+      });
+      // console.log("payment intent", paymentIntent);
 
-    //   //3 after confirmation order fire store database save and clean basket
+      //3 after confirmation order fire store database save and clean basket
 
-    //   // after get conformation to store in firestore databse to save, clear basket after check out
-    //   await db
-    //     .collection("users")
-    //     .doc(user.uid)
-    //     .collection("orders")
-    //     .doc(paymentIntent.id)
-    //     .set({
-    //       basket: basket,
-    //       amount: paymentIntent.amount,
-    //       created: paymentIntent.created
-    //     });
+      // after get conformation to store in firestore databse to save, clear basket after check out
+      await db
+        .collection("users")
+        .doc(user.uid)
+        .collection("orders")
+        .doc(paymentIntent.id)
+        .set({
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created
+        });
 
-    //   // to empty basket
-    //   dispatch({ type: type.EMPTY_BASKET });
+      // to empty basket
+      dispatch({ type: type.EMPTY_BASKET });
 
-    //   setProcessing(false);
-    //   navigate("/orders", { state: { msg: "you have placed new order" } });
-    // } catch (error) {
-    //   console.log(error);
-    //   setProcessing(false);
-    // }
+      setProcessing(false);
+      navigate("/orders", { state: { msg: "you have placed new order" } });
+    } catch (error) {
+      console.log(error);
+      setProcessing(false);
+    }
   };
 
   return (
