@@ -149,7 +149,7 @@
   margin-right: 5px;
   vertical-align: middle;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
   .logo img {
     height: 40px;
     width: 35vw;
@@ -162,7 +162,7 @@
   .deliveredTo {
     font-size: 0.5rem;
   }
-  .right_wrapper{
+  .right_wrapper {
     width: 30%;
   }
   .country {
@@ -170,20 +170,20 @@
     font-weight: bold;
   }
   .searchInput {
-    width:20vw;
+    width: 20vw;
   }
   .middleWrapper {
     display: flex;
-    width: 40%;
+    width: 35%;
     margin-left: 5%;
   }
   .leftWrapper p {
     font-size: 0.5;
   }
-   .leftWrapper{
+  .leftWrapper {
     display: flex;
-    gap:7px;
-   }
+    gap: 7px;
+  }
   .language {
     display: none;
   }
@@ -198,5 +198,9 @@
 
   .LowerHeaderWrapper {
     display: none;
+  }
+  .leftWrapper {
+    width: 40%;
+    margin-right: 10px;
   }
 }
