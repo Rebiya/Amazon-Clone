@@ -11,7 +11,7 @@ const stripe = require("stripe")(process.env.STRIPE_KEY);
 const app = express();
 
 // Use CORS middleware to allow requests from any origin
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "*" }));
 
 
 // Parse incoming JSON requests
