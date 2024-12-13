@@ -5,7 +5,7 @@ import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "../../Components/Product/Currency";
-import { axiosInstance } from "../../Api/axios";
+import { axiosInstance } from "../../API/Axios";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { type } from "../../Utility/action.type";
