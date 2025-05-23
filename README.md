@@ -1,60 +1,61 @@
-# 📦 Amazon Clone - YAML Styled Project README
+# 🛒 Amazon Clone
 
-project:
-  name: "Amazon Clone"
-  description: >
-    A simplified yet powerful clone of the Amazon website, replicating core functionalities 
-    such as authentication, shopping cart, and Stripe-integrated checkout. The application 
-    is responsive and styled using Material UI, providing a clean and modern shopping experience.
-  demo:
-    video: "https://youtu.be/rfYiQ77jWIY?si=A3FSYdObORhQE859"
-    live_site: "https://rebu-amazon.netlify.app"
+A feature-rich Amazon website clone built with modern frontend technologies. It replicates key functionalities such as product listings, user authentication, cart management, and secure checkout — all wrapped in a clean, responsive UI.
 
-features:
-  - "🔐 User Authentication (Firebase)"
-  - "🛍️ Product Listings with details"
-  - "🛒 Shopping Cart functionality"
-  - "💳 Stripe-integrated secure Checkout"
-  - "📱 Responsive Design for all screen sizes"
+🎥 **[Watch Demo Video](https://youtu.be/rfYiQ77jWIY?si=A3FSYdObORhQE859)**  
+🌐 **[Live Site](https://rebu-amazon.netlify.app)**
 
-tech_stack:
-  frontend:
-    - "⚛️ React"
-    - "🧭 React Router DOM"
-    - "🎨 Material UI (MUI)"
-    - "🌐 Axios"
-  backend_services:
-    - "🔥 Firebase (Authentication & Services)"
-    - "💳 Stripe (Payments)"
+---
 
-installation:
-  steps:
-    - step: "Clone the repository"
-      command: "git clone https://github.com/Rebiya/Amazon-Clone.git"
-    - step: "Navigate to the project directory"
-      command: "cd Amazon-Clone"
-    - step: "Install dependencies"
-      command: "npm install"
-    - step: "Start the development server"
-      command: "npm run dev"
-    - step: "Open in browser"
-      url: "http://localhost:5173"
+## 🚀 Overview
 
-usage:
-  description: >
-    Once the application is running, users can:
-    - Sign up or sign in via Firebase.
-    - Browse products listed on the homepage.
-    - Add products to the shopping cart.
-    - View cart items and total cost.
-    - Proceed to checkout using Stripe payment gateway.
-    - Enjoy the experience across desktop, tablet, or mobile devices.
+This Amazon Clone offers:
 
-deployment:
-  platform: "Netlify"
-  url: "https://rebu-amazon.netlify.app"
+- User authentication with Firebase
+- Product listing and detail views
+- Add-to-cart and cart management
+- Checkout process integrated with Stripe
+- Responsive layout for all screen sizes
 
-author:
-  name: "Rebiya"
-  github: "https://github.com/Rebiya"
-  linkedin: "https://www.linkedin.com/in/rebiya"
+---
+
+## 🧩 Features
+
+- **Authentication**: Register/Login with Firebase
+- **Product Listings**: Browse and explore a variety of items
+- **Shopping Cart**: Add, remove, and manage products
+- **Checkout**: Stripe for secure payment
+- **Responsive Design**: Mobile-first, tablet-ready, and desktop-optimized
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React
+- React Router DOM
+- Material UI (MUI)
+- Axios
+
+**Backend Services**
+- Firebase (authentication & storage)
+- Stripe (payment integration)
+
+---
+
+## ⚙️ Installation
+
+Follow these steps to run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Rebiya/Amazon-Clone.git
+
+# 2. Navigate to the project directory
+cd Amazon-Clone
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
